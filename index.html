@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Young Kim">
+        <meta name="description" content="Memory Game">
+
+        <title>Memory Game: Match the Tiles!</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Memory Game: Match the Tiles!</h1>
+            </header>
+            <div class="container">
+                <div id="gamerules">
+                    <h2>Memory Match Games Rules</h2>
+                    <ol>
+                        <li>8 pairs to match so 8 different pictures</li>
+                        <li>Turn 2 cards over at a time</li>
+                        <li>If it matches, the cards will stay revealed</li>
+                        <li>If not, they will be flipped back</li>
+                        <li>You win when all pairs are matched.</li>
+                    </ol>
+                    <div id="reminder">
+                        <button type="button" class="btn btn-default">I Got It!</button>
+                    </div>
+                </div>
+
+                    <div id="win-screen">
+                        <p id="timeMsg"></p>
+                        <div id="resetButtonHolder">
+                            <button type="button" class="btn btn-success" id="resetButton">Play Again
+                            </button>
+                        </div>
+                        <audio id="audio" src="audio/victory.mp3" type="audio/mpeg" preload="auto"></audio>
+                    </div>
+
+                    <div id="centeredButtons">
+                        <div id="howButton">
+                            <button type="button" class="btn btn-danger">How to Play</button>
+                        </div>
+
+                        <div id="startButtonpos">
+                            <button type="button" class="btn btn-default" id="startButton">Start New Game</button>
+                        </div>
+                    </div>
+
+                    <div id="info">
+                        <p id="gametime">Duration: 0</p>
+                        <p id="matches">Matches: 0</p>
+                        <p id="mistakes">Mistakes: 0</p>
+                        <p id="remaining">Remaining Pairs: 8</p>
+                    </div>
+
+                    <div class="game-board">
+                        <ul class="tiles" id="tiles">
+                        </ul>
+                    </div>
+
+                    <div id="popover"></div>
+            </div>
+        </main>
+
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/lodash-2.4.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
